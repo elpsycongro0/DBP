@@ -1,16 +1,14 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 int main(){
-    int x[10];
-    int t;
-    for(int i=0;i<10;i++){cin>>*(x+i);}
-    for(int j=0;j<10;j++){
-        for(int i=0;i<9;i++){
-            if(*(x+i)>*(x+i+1)){
-                t=*(x+i+1);*(x+i+1)=*(x+i);*(x+i)=t;
-            }
-        }
-    }
-    for(int i=0;i<10;i++){cout<<*(x+i)<<" ";}
-    return 0;
+int b=1,c=1,d=0,t,r=0;
+while(d<4000000){
+    d=b+c;
+    t=c;
+    c=d;
+    b=t;
+    if(d%2==0){r=r+d;}
+}
+cout<<r;
+return 0;
 }
