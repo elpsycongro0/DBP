@@ -13,22 +13,12 @@ public:
         if(Vacia()){primero=aux;}
         ultimo = aux;
     }
-    T Pop() {
-        T temp(*primero->pT);
-        Nodo<T> *aux = primero;
-        ultimo = aux->siguiente;
-        delete aux;
-        return temp;
-    }
     bool Vacia() { return ultimo == NULL; }
     void mostrar() {
         Nodo<T> *ap=ultimo;
         while(ap!=primero->siguiente){std::cout<<*ap->pT<<std::endl;ap=ap->siguiente;}
         std::cout<<"---"<<std::endl;
     }
-    Nodo<T>* getinicio(){return ultimo;}
-    void apfondo(Nodo<T> *punt){primero->anterior=punt;}
-    void changefondo(Nodo<T> *newfondo){primero=newfondo;}
     lista<T>* operator +(lista<T> sumando){
         lista<T> *temp=new lista<T>(sumando.getinicio(),primero);
         sumando.apfondo(ultimo);
