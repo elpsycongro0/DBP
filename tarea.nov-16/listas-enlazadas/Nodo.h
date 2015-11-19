@@ -1,12 +1,16 @@
 #include <bits/stdc++.h>
-class nodo{
-private:
-    int valor;
-    nodo *siguiente;
+template <class Tn>
+class Nodo {
 public:
-    nodo(int v,nodo *sig=NULL){
-        valor=v;
-        siguiente=sig;
+    Tn *pT;
+    Nodo<Tn> *siguiente;
+    Nodo(Tn t, Nodo<Tn> *ant){
+        siguiente=ant;
+        pT = new Tn(t);
     }
-    friend class lista;
+    Nodo(Nodo<Tn> *n) {
+        pT = new Tn(*n.pT);
+        siguiente = n.siguiente;
+    }
+    ~Nodo() { delete pT; }
 };
