@@ -69,3 +69,4 @@ void navep::muerte(){
 }
 int navep::X(){return x;}
 int navep::Y(){return y;}
+bool navep::gameend(){if(vidas==0){return true;}else{return false;}}
