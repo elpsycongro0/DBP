@@ -13,6 +13,11 @@ bala::~bala(){
 void bala::mover(){
     gotox(x,y);cout<<" ";
     if(x<99){x++;}
-    if(x==100){}
     gotox(x,y);cout<<"-";
 }
+bool bala::fuera(){
+    if(x==99){return true;}
+    else{return false;}
+}
+int bala::X(){return x;}
+int bala::Y(){return y;}
