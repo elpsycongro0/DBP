@@ -3,13 +3,13 @@
 #include <conio.h>
 #include "funciones.h"
 using namespace std;
-asteroide::asteroide(int _y){y=_y;x=99;}
+asteroide::asteroide(int _x,int _y){y=_y;x=_x;}
 void asteroide::impast(){
     gotox(x,y);cout<<char(184);
 }
 void asteroide::mover(){
     gotox(x,y);cout<<" ";
-    x-=2;
+    x--;
     if(x<2){
         y=rand()%30+4;
         x=99;
@@ -26,3 +26,6 @@ void asteroide::colision(navep &naveaux){
         x=99;
     }
 }
+void asteroide::reload(){x=rand()%9+90;y=rand()%31+4;}
+int asteroide::X(){return x;}
+int asteroide::Y(){return y;}
