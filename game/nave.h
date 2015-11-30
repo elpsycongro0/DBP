@@ -12,5 +12,6 @@ public:
     void muerte();
     int X();
     int Y();
+    bool gameend();
     friend class asteroide;
 };
