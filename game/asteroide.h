@@ -1,12 +1,7 @@
-class asteroide{
-private:
-    int x,y;
+#include "plantilla.cpp"
+class asteroide: public plantilla{
 public:
-    asteroide(int,int);
-    void impast();
-    void mover();
-    void colision(navep&);
-    void reload();
-    int X();
-    int Y();
+	asteroide(int,int);
+	void colision(navep&);
+	void reload();
 };
