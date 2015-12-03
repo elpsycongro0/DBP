@@ -1,11 +1,11 @@
 class bala{
 private:
-    int x,y;
+	int x,y;
 public:
-    bala(int ,int);
-    ~bala();
-    void mover();
-    bool fuera();
-    int X();
-    int Y();
+	bala(int ,int);
+	~bala();
+	void mover();
+	bool fuera();
+	int X();
+	int Y();
 };
